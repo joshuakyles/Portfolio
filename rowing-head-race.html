@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<!--
+  Joshua Kyles — Head race — Rowing Collection
+  Page slug: /rowing/head-race
+  Tailwind CSS (Play CDN) + PhotoSwipe v5. No build step. Search "TODO" for placeholders.
+-->
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c0a08">
+<title>Head race — Rowing Collection — Joshua Kyles</title>
+<meta name="description" content="Head race: Bow-number coverage from a head-race format, start to finish line. Full-resolution gallery with captions and metadata.">
+<link rel="canonical" href="https://joshuakyles.com/rowing/head-race">
+<meta property="og:title" content="Head race — Rowing Collection — Joshua Kyles">
+<meta property="og:description" content="Head race: Bow-number coverage from a head-race format, start to finish line. Full-resolution gallery with captions and metadata.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joshuakyles.com/rowing/head-race">
+<!-- TODO: replace with a real 1200x630 share image -->
+<meta property="og:image" content="https://joshuakyles.com/assets/og-rowing.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.css">
+<style>
+:root{--bg:#0c0a08;--bg-t:rgba(12,10,8,.78);--surface:#17130f;--text:#f3efe8;--muted:#a79e92;
+--faint:rgba(243,239,232,.4);--line:rgba(243,239,232,.12);--overlay:rgba(10,8,6,.62);--accent:#d97736}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
+.font-display{font-family:Fraunces,serif}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.ig-wrap iframe{width:100%!important;min-width:0!important}
+.jk-pswp-caption{position:absolute;left:0;right:0;bottom:0;padding:10px 16px;font:13px/1.4 Inter,system-ui,sans-serif;color:#f3efe8;background:linear-gradient(to top,rgba(0,0,0,.75),transparent);text-align:center;pointer-events:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}
+html{scroll-behavior:auto}}
+</style>
+</head>
+<body class="min-h-screen overflow-x-hidden antialiased">
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:m-3 focus:bg-[var(--text)] focus:px-4 focus:py-2 focus:text-[var(--bg)]">Skip to content</a>
+<header class="fixed inset-x-0 top-0 z-50 border-b border-[var(--line)] bg-[var(--bg-t)] backdrop-blur-md">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 md:px-6">
+    <a href="index.html" class="font-display whitespace-nowrap text-base tracking-tight md:text-lg">Joshua&nbsp;Kyles</a>
+    <nav aria-label="Primary" class="hidden items-center gap-5 text-sm text-[var(--muted)] lg:flex">
+      <a href="rowing.html" class="transition-colors hover:text-[var(--text)]">Rowing</a>
+      <a href="sports.html" class="transition-colors hover:text-[var(--text)]">Sports</a>
+      <a href="photo.html" class="transition-colors hover:text-[var(--text)]">Photo</a>
+      <a href="video.html" class="transition-colors hover:text-[var(--text)]">Video</a>
+      <a href="live.html" class="transition-colors hover:text-[var(--text)]">Live</a>
+      <a href="ultra.html" class="transition-colors hover:text-[var(--text)]">Ultra</a>
+      <a href="aerial.html" class="transition-colors hover:text-[var(--text)]">Aerial</a>
+      <a href="hire.html" class="transition-colors hover:text-[var(--text)]">Hire</a>
+      <a href="contact.html" class="transition-colors hover:text-[var(--text)]">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="hire.html" class="hidden whitespace-nowrap rounded border border-[var(--line)] px-3 py-1.5 text-sm transition-colors hover:bg-[var(--surface)] md:inline-block lg:hidden">Rates</a>
+      <button id="navToggle" type="button" aria-expanded="false" aria-controls="mobileNav"
+        class="flex items-center gap-2 rounded border border-[var(--line)] px-3 py-1.5 text-sm transition-colors hover:bg-[var(--surface)] lg:hidden">
+        <svg id="navIconBars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg id="navIconClose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden h-4 w-4" aria-hidden="true">
+          <line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line>
+        </svg>
+        <span id="navLabel">Menu</span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobileNav" aria-label="Mobile" class="hidden border-t border-[var(--line)] bg-[var(--bg)] lg:hidden">
+    <div class="mx-auto grid max-w-6xl grid-cols-2 gap-x-4 px-5 py-4 text-sm text-[var(--muted)]">
+      <a href="rowing.html" class="border-b border-[var(--line)] py-2.5 hover:text-[var(--text)]">Rowing</a>
+      <a href="sports.html" class="border-b border-[var(--line)] py-2.5 hover:text-[var(--text)]">Sports</a>
+      <a href="photo.html" class="border-b border-[var(--line)] py-2.5 hover:text-[var(--text)]">Photo</a>
+      <a href="video.html" class="border-b border-[var(--line)] py-2.5 hover:text-[var(--text)]">Video</a>
+      <a href="live.html" class="border-b border-[var(--line)] py-2.5 hover:text-[var(--text)]">Live</a>
+      <a href="ultra.html" class="border-b border-[var(--line)] py-2.5 hover:text-[var(--text)]">Ultra</a>
+      <a href="aerial.html" class="border-b border-[var(--line)] py-2.5 hover:text-[var(--text)]">Aerial</a>
+      <a href="hire.html" class="border-b border-[var(--line)] py-2.5 hover:text-[var(--text)]">Hire</a>
+      <a href="contact.html" class="border-b border-[var(--line)] py-2.5 hover:text-[var(--text)]">Contact</a>
+    </div>
+  </nav>
+</header>
+<main id="main" class="pt-[57px]">
+<section class="border-b border-[var(--line)] px-5 py-14 md:px-6 md:py-20">
+  <div class="mx-auto max-w-6xl">
+    <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent)]">Rowing</p>
+    <h1 class="font-display max-w-3xl text-3xl leading-[1.12] tracking-tight md:text-5xl">Head race</h1>
+    <p class="mt-5 max-w-2xl leading-relaxed text-[var(--muted)] md:text-lg">Bow-number coverage from a head-race format, start to finish line.</p>
+    <div class="mt-7 flex flex-wrap gap-3"><a href="rowing.html" class="bg-[var(--text)] text-[var(--bg)] hover:opacity-90 px-5 py-2.5 text-sm font-medium transition">Back to Rowing</a><a href="contact.html" class="border border-[var(--line)] hover:bg-[var(--surface)] px-5 py-2.5 text-sm font-medium transition">Contact</a></div>
+  </div>
+</section>
+<section class="mx-auto max-w-6xl px-3 py-12 md:px-6 md:py-16">
+  <!-- TODO: replace every picsum.photos URL with your real images (full-res href + 400w/800w thumbs).
+       Tile shape auto-detects landscape vs portrait from each photo's real dimensions -- see TILE_JS. -->
+  <div class="pswp-gallery grid grid-flow-row-dense grid-cols-2 gap-1.5 md:grid-cols-3 md:gap-3 lg:grid-cols-4">
+    <a href="https://picsum.photos/seed/jkrowc21/2000/1333" data-pswp-width="2000" data-pswp-height="1333"
+       data-cropped="true" data-caption="Indoor racing · Frame JKROWC2-001 · Full-res + metadata on delivery" data-tile
+       class="group relative block aspect-[4/5] overflow-hidden bg-[var(--surface)]">
+      <img src="https://picsum.photos/seed/jkrowc21/800/533"
+           srcset="https://picsum.photos/seed/jkrowc21/400/267 400w, https://picsum.photos/seed/jkrowc21/800/533 800w"
+           sizes="(max-width:767px) 50vw, 25vw" loading="lazy" decoding="async"
+           width="800" height="533" alt="Erg test, final ten strokes"
+           class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+      <span class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-[11px] leading-snug text-white opacity-0 transition-opacity group-hover:opacity-100 md:text-xs">Indoor racing</span>
+    </a>
+    <a href="https://picsum.photos/seed/jkrowc22/2000/1333" data-pswp-width="2000" data-pswp-height="1333"
+       data-cropped="true" data-caption="Training block · Frame JKROWC2-002 · Full-res + metadata on delivery" data-tile
+       class="group relative block aspect-[4/5] overflow-hidden bg-[var(--surface)]">
+      <img src="https://picsum.photos/seed/jkrowc22/800/533"
+           srcset="https://picsum.photos/seed/jkrowc22/400/267 400w, https://picsum.photos/seed/jkrowc22/800/533 800w"
+           sizes="(max-width:767px) 50vw, 25vw" loading="lazy" decoding="async"
+           width="800" height="533" alt="Four in a training piece on flat water"
+           class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+      <span class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-[11px] leading-snug text-white opacity-0 transition-opacity group-hover:opacity-100 md:text-xs">Training block</span>
+    </a>
+    <a href="https://picsum.photos/seed/jkrowc23/2000/1333" data-pswp-width="2000" data-pswp-height="1333"
+       data-cropped="true" data-caption="Boat park detail · Frame JKROWC2-003 · Full-res + metadata on delivery" data-tile
+       class="group relative block aspect-[4/5] overflow-hidden bg-[var(--surface)]">
+      <img src="https://picsum.photos/seed/jkrowc23/800/533"
+           srcset="https://picsum.photos/seed/jkrowc23/400/267 400w, https://picsum.photos/seed/jkrowc23/800/533 800w"
+           sizes="(max-width:767px) 50vw, 25vw" loading="lazy" decoding="async"
+           width="800" height="533" alt="Rigging check in the boat park"
+           class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+      <span class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-[11px] leading-snug text-white opacity-0 transition-opacity group-hover:opacity-100 md:text-xs">Boat park detail</span>
+    </a>
+    <a href="https://picsum.photos/seed/jkrowc24/1500/2000" data-pswp-width="1500" data-pswp-height="2000"
+       data-cropped="true" data-caption="Portrait session · Frame JKROWC2-004 · Full-res + metadata on delivery" data-tile
+       class="group relative block aspect-[4/5] overflow-hidden bg-[var(--surface)]">
+      <img src="https://picsum.photos/seed/jkrowc24/800/1067"
+           srcset="https://picsum.photos/seed/jkrowc24/400/533 400w, https://picsum.photos/seed/jkrowc24/800/1067 800w"
+           sizes="(max-width:767px) 50vw, 25vw" loading="lazy" decoding="async"
+           width="800" height="1067" alt="Athlete portrait after finals"
+           class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+      <span class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-[11px] leading-snug text-white opacity-0 transition-opacity group-hover:opacity-100 md:text-xs">Portrait session</span>
+    </a>
+    <a href="https://picsum.photos/seed/jkrowc25/1500/2000" data-pswp-width="1500" data-pswp-height="2000"
+       data-cropped="true" data-caption="Training block · Frame JKROWC2-005 · Full-res + metadata on delivery" data-tile
+       class="group relative block aspect-[4/5] overflow-hidden bg-[var(--surface)]">
+      <img src="https://picsum.photos/seed/jkrowc25/800/1067"
+           srcset="https://picsum.photos/seed/jkrowc25/400/533 400w, https://picsum.photos/seed/jkrowc25/800/1067 800w"
+           sizes="(max-width:767px) 50vw, 25vw" loading="lazy" decoding="async"
+           width="800" height="1067" alt="Coach launch following a piece"
+           class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+      <span class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-[11px] leading-snug text-white opacity-0 transition-opacity group-hover:opacity-100 md:text-xs">Training block</span>
+    </a>
+    <a href="https://picsum.photos/seed/jkrowc26/2000/1333" data-pswp-width="2000" data-pswp-height="1333"
+       data-cropped="true" data-caption="Finals — podium · Frame JKROWC2-006 · Full-res + metadata on delivery" data-tile
+       class="group relative block aspect-[4/5] overflow-hidden bg-[var(--surface)]">
+      <img src="https://picsum.photos/seed/jkrowc26/800/533"
+           srcset="https://picsum.photos/seed/jkrowc26/400/267 400w, https://picsum.photos/seed/jkrowc26/800/533 800w"
+           sizes="(max-width:767px) 50vw, 25vw" loading="lazy" decoding="async"
+           width="800" height="533" alt="Medal dock, winning crew"
+           class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+      <span class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-[11px] leading-snug text-white opacity-0 transition-opacity group-hover:opacity-100 md:text-xs">Finals — podium</span>
+    </a>
+  </div>
+  <p class="mt-6 text-xs text-[var(--faint)]">Click any frame to enlarge, zoom, and view its caption and frame metadata. Full captions and athlete names supplied with every delivered edit.</p>
+</section>
+<section class="px-5 py-16 text-center md:px-6 md:py-20">
+  <div class="mx-auto max-w-2xl">
+    <h2 class="font-display text-2xl tracking-tight md:text-3xl">Discuss this kind of coverage</h2>
+    <p class="mt-4 text-[var(--muted)]">Domestic and international coverage. Written scope, deliverables, and licensing on every job.</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <a href="contact.html" class="bg-[var(--text)] px-6 py-3 text-sm font-medium text-[var(--bg)] transition hover:opacity-90">Contact</a>
+      <a href="hire.html" class="border border-[var(--line)] px-6 py-3 text-sm font-medium transition hover:bg-[var(--surface)]">Services &amp; rates</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="border-t border-[var(--line)] bg-[var(--surface)] py-10 text-xs text-[var(--faint)]">
+  <div class="mx-auto max-w-6xl px-5 md:px-6">
+    <div class="grid gap-8 sm:grid-cols-3">
+      <div>
+        <div class="font-display mb-2 text-sm text-[var(--text)]">Joshua Kyles</div>
+        <p class="leading-relaxed">Rowing &amp; endurance-sports photography, videography, and live production. Seattle, WA.</p>
+      </div>
+      <div>
+        <div class="mb-2 text-[var(--muted)]">Coverage</div>
+        <ul class="space-y-1">
+          <li><a class="hover:text-[var(--text)]" href="rowing.html">Rowing</a></li>
+          <li><a class="hover:text-[var(--text)]" href="sports.html">Sports</a></li>
+          <li><a class="hover:text-[var(--text)]" href="ultra.html">Ultra &amp; endurance</a></li>
+          <li><a class="hover:text-[var(--text)]" href="photo.html">General photo</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="mb-2 text-[var(--muted)]">Production</div>
+        <ul class="space-y-1">
+          <li><a class="hover:text-[var(--text)]" href="video.html">Video</a></li>
+          <li><a class="hover:text-[var(--text)]" href="live.html">Live streams</a></li>
+          <li><a class="hover:text-[var(--text)]" href="aerial.html">Aerial &amp; mapping</a></li>
+          <li><a class="hover:text-[var(--text)]" href="hire.html">Hire &amp; rates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 flex flex-col items-center justify-between gap-2 border-t border-[var(--line)] pt-6 sm:flex-row">
+      <span>&copy; <span id="year"></span> Joshua Kyles. All rights reserved.</span>
+      <div class="flex items-center gap-4">
+        <!-- TODO: confirm the email address you want published -->
+        <a class="hover:text-[var(--text)]" href="mailto:hello@joshuakyles.com">hello@joshuakyles.com</a>
+        <a class="hover:text-[var(--text)]" href="https://www.instagram.com/joshua.kyles/" target="_blank" rel="noopener">Instagram</a>
+        <a class="hover:text-[var(--text)]" href="https://www.linkedin.com/in/joshua-kyles/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="hover:text-[var(--text)]" href="https://www.youtube.com/@joshuakyles" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+(function(){
+  var b=document.getElementById('navToggle'),n=document.getElementById('mobileNav');
+  var bars=document.getElementById('navIconBars'),xIcon=document.getElementById('navIconClose'),lbl=document.getElementById('navLabel');
+  if(!b||!n)return;
+  b.addEventListener('click',function(){
+    var open=n.classList.toggle('hidden')===false;
+    b.setAttribute('aria-expanded',String(open));
+    if(lbl)lbl.textContent=open?'Close':'Menu';
+    if(bars&&xIcon){bars.classList.toggle('hidden',open);xIcon.classList.toggle('hidden',!open);}
+  });
+})();
+</script>
+<script type="module">
+import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js';
+var lightbox = new PhotoSwipeLightbox({
+  gallery:'.pswp-gallery', children:'a',
+  pswpModule:()=>import('https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.esm.min.js'),
+  padding:{top:16,bottom:56,left:16,right:16},
+  bgOpacity:0.96
+});
+lightbox.on('uiRegister', function(){
+  lightbox.pswp.ui.registerElement({
+    name:'jk-caption', order:9, isButton:false, appendTo:'root',
+    onInit:function(el){
+      el.className='jk-pswp-caption';
+      lightbox.pswp.on('change', function(){
+        var s = lightbox.pswp.currSlide && lightbox.pswp.currSlide.data.element;
+        el.textContent = s ? (s.dataset.caption || '') : '';
+      });
+    }
+  });
+});
+lightbox.init();
+</script>
+<script>
+(function(){
+  /* Classifies each gallery tile as landscape or portrait from the photo's own
+     natural pixel dimensions (not a hardcoded guess), then lets the dense grid
+     reflow to fill gaps -- so the layout adapts automatically to however many
+     landscape vs portrait photos are actually dropped into a section. */
+  function classify(a, img){
+    var w = img.naturalWidth, h = img.naturalHeight;
+    if (!w || !h) return;
+    if (w >= h){
+      a.classList.remove('aspect-[4/5]');
+      a.classList.add('aspect-[3/2]', 'col-span-2');
+    } else {
+      a.classList.remove('aspect-[3/2]', 'col-span-2');
+      a.classList.add('aspect-[4/5]');
+    }
+  }
+  function run(){
+    document.querySelectorAll('.pswp-gallery a[data-tile]').forEach(function(a){
+      var img = a.querySelector('img');
+      if (!img) return;
+      if (img.complete && img.naturalWidth){ classify(a, img); }
+      else { img.addEventListener('load', function(){ classify(a, img); }, {once:true}); }
+    });
+  }
+  if (document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', run); }
+  else { run(); }
+})();
+</script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://perplexity.localhost","http://localhost:1420","http://127.0.0.1:1420","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
